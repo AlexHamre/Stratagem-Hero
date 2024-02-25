@@ -1,0 +1,216 @@
+{
+    "list": [
+        {
+            "name": "Reinforcement",
+            "sequence": "🡅🡇🡆🡄🡅"
+        },
+        {
+            "name": "Resupply",
+            "sequence": "🡇🡇🡅🡆"
+        },
+        {
+            "name": "SOS Beacon",
+            "sequence": "🡅🡇🡆🡅"
+        },
+        {
+            "name": "Hellbomb",
+            "sequence": "🡇🡅🡄🡇🡅🡆🡇🡅"
+        },
+        {
+            "name": "Machine Gun",
+            "sequence": "🡇🡄🡇🡅🡆"
+        },
+        {
+            "name": "Anti-Material Rifle",
+            "sequence": "🡇🡄🡆🡅🡇"
+        },
+        {
+            "name": "Stalwart",
+            "sequence": "🡇🡄🡇🡅🡅🡄"
+        },
+        {
+            "name": "Expendable Anti-Tank",
+            "sequence": "🡇🡇🡄🡅🡆"
+        },
+        {
+            "name": "Recoiless Rifle",
+            "sequence": "🡇🡄🡆🡆🡄"
+        },
+        {
+            "name": "Flamethrower",
+            "sequence": "🡇🡄🡅🡇🡅"
+        },
+        {
+            "name": "Auto-Canon",
+            "sequence": "🡇🡄🡇🡅🡅🡆"
+        },
+        {
+            "name": "Railgun",
+            "sequence": "🡇🡆🡇🡅🡄🡆"
+        },
+        {
+            "name": "Spear",
+            "sequence": "🡇🡇🡅🡇🡇"
+        },
+        {
+            "name": "Orbital Gatling Barrage",
+            "sequence": "🡆🡇🡄🡅🡅"
+        },
+        {
+            "name": "Orbital Airburst Strike",
+            "sequence": "🡆🡆🡆"
+        },
+        {
+            "name": "Orbital 120MM HE Barrage",
+            "sequence": "🡆🡆🡇🡄🡆🡇"
+        },
+        {
+            "name": "Orbital 380MM HE Barrage",
+            "sequence": "🡆🡇🡅🡅🡆🡇🡇"
+        },
+        {
+            "name": "Orbital Walking Barrage",
+            "sequence": "🡆🡇🡆🡇🡆🡇"
+        },
+        {
+            "name": "Orbital Laser",
+            "sequence": "🡆🡇🡅🡆🡇"
+        },
+        {
+            "name": "Orbital Railgun Strike",
+            "sequence": "🡆🡅🡇🡇🡆"
+        },
+        {
+            "name": "Eagle Straffing Run",
+            "sequence": "🡅🡆🡆"
+        },
+        {
+            "name": "Eagle Airstrike",
+            "sequence": "🡅🡆🡇🡆"
+        },
+        {
+            "name": "Eagle Cluster Bomb",
+            "sequence": "🡅🡆🡇🡇🡆"
+        },
+        {
+            "name": "Eagle Napalm Strike",
+            "sequence": "🡅🡆🡇🡅"
+        },
+        {
+            "name": "Jump Pack",
+            "sequence": "🡇🡅🡅🡇🡅"
+        },
+        {
+            "name": "Eagle Smoke Strike",
+            "sequence": "🡅🡆🡅🡇"
+        },
+        {
+            "name": "Eagle 110MM Rocket Pods",
+            "sequence": "🡅🡆🡅🡄"
+        },
+        {
+            "name": "Eagle 500KG Bomb",
+            "sequence": "🡅🡆🡇🡇🡇"
+        },
+        {
+            "name": "Eagle Rearm",
+            "sequence": "🡅🡅🡄🡅🡆"
+        },
+        {
+            "name": "Orbital Precision Strike",
+            "sequence": "🡆🡆🡅"
+        },
+        {
+            "name": "Orbital Gas Strike",
+            "sequence": "🡆🡆🡇🡆"
+        },
+        {
+            "name": "Orbital EMS Strike",
+            "sequence": "🡆🡆🡄🡇"
+        },
+        {
+            "name": "Orbital Smoke Strike",
+            "sequence": "🡆🡆🡇🡅"
+        },
+        {
+            "name": "HMG Emplacement",
+            "sequence": "🡇🡅🡄🡆🡆🡄"
+        },
+        {
+            "name": "Shield Generator",
+            "sequence": "🡇🡇🡄🡆🡄🡆"
+        },
+        {
+            "name": "Tesla Tower",
+            "sequence": "🡅🡇🡆🡅🡄🡆"
+        },
+        {
+            "name": "Anti-Personnel Minefield",
+            "sequence": "🡇🡄🡅🡆"
+        },
+        {
+            "name": "Supply Pack",
+            "sequence": "🡇🡄🡇🡅🡅🡇"
+        },
+        {
+            "name": "Grenade Launcher",
+            "sequence": "🡇🡄🡇🡅🡅🡇"
+        },
+        {
+            "name": "Laser Canon",
+            "sequence": "🡇🡄🡇🡅🡄"
+        },
+        {
+            "name": "Incendiary Mines",
+            "sequence": "🡇🡄🡄🡇"
+        },
+        {
+            "name": "Guard Dog Rover",
+            "sequence": "🡇🡅🡄🡅🡆🡆"
+        },
+        {
+            "name": "Balistic Shield",
+            "sequence": "🡇🡄🡇🡇🡅🡄"
+        },
+        {
+            "name": "Arc Thrower",
+            "sequence": "🡇🡆🡇🡅🡄🡄"
+        },
+        {
+            "name": "Shield Generator Pack",
+            "sequence": "🡇🡅🡄🡆🡄🡆"
+        },
+        {
+            "name": "Machine Gun Sentry",
+            "sequence": "🡇🡅🡆🡆🡅"
+        },
+        {
+            "name": "Gatling Sentry",
+            "sequence": "🡇🡅🡆🡄"
+        },
+        {
+            "name": "Mortar Sentry",
+            "sequence": "🡇🡅🡆🡆🡇"
+        },
+        {
+            "name": "Guard Dog",
+            "sequence": "🡇🡅🡄🡅🡆🡇"
+        },
+        {
+            "name": "Autocanon Sentry",
+            "sequence": "🡇🡅🡆🡅🡄🡅"
+        },
+        {
+            "name": "Rocket Sentry",
+            "sequence": "🡇🡅🡆🡆🡄"
+        },
+        {
+            "name": "EMS Mortar Sentry",
+            "sequence": "🡇🡅🡆🡇🡆"
+        },
+        {
+            "name": "Global Illumination Flare",
+            "sequence": "🡆🡆🡄🡄"
+        }
+    ]
+}

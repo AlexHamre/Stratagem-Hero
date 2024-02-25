@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helldivers 2 stratagem hero</title>
+    <link href="https://fonts.cdnfonts.com/css/insignia" rel="stylesheet">
+</head>
+<body style="background-color: rgb(25,25,25) ;font-family: 'Insignia', sans-serif;">
+
+    <div style="color: white; text-align: center; font-size: 400%; border: 2%; border-color: white; border-style: solid hidden solid hidden; height: 80vh; margin-top: 10vh;">
+        <div style="padding: 5%;">
+            <p id="image">image</p>
+            <p id="name">name</p>
+            <p id="sequence">sequence</p>
+
+            <img src="HD2 icons/NO BG/" alt="">
+        </div>
+    </div>
+    <div style="color: white;">Alexander Hamre</div>
+    <br>
+    Credit:
+    <br>
+    Icons: https://www.dropbox.com/scl/fi/tcel8u07a2w37ch4h59r7/HD2-icons.zip
+    <br>
+    Combos: https://steamcommunity.com/sharedfiles/filedetails/?id=3161075951
+</body>
+</html>
+
+
+<script>
+//comment
+    list = [
+        {
+            "name": "Reinforcement",
+            "sequence": "wsdaw"
+        },
+        {
+            "name": "Resupply",
+            "sequence": "sswd"
+        },
+        {
+            "name": "SOS Beacon",
+            "sequence": "wsdw"
+        },
+        {
+            "name": "Hellbomb",
+            "sequence": "swaswdsw"
+        },
+        {
+            "name": "Machine Gun",
+            "sequence": "saswd"
+        },
+        {
+            "name": "Anti-Material Rifle",
+            "sequence": "sadws"
+        },
+        {
+            "name": "Stalwart",
+            "sequence": "saswwa"
+        },
+        {
+            "name": "Expendable Anti-Tank",
+            "sequence": "ssawd"
+        },
+        {
+            "name": "Recoiless Rifle",
+            "sequence": "sadda"
+        },
+        {
+            "name": "Flamethrower",
+            "sequence": "sawsw"
+        },
+        {
+            "name": "Auto-Canon",
+            "sequence": "saswwd"
+        },
+        {
+            "name": "Railgun",
+            "sequence": "sdswad"
+        },
+        {
+            "name": "Spear",
+            "sequence": "sswss"
+        },
+        {
+            "name": "Orbital Gatling Barrage",
+            "sequence": "dsaww"
+        },
+        {
+            "name": "Orbital Airburst Strike",
+            "sequence": "ddd"
+        },
+        {
+            "name": "Orbital 120MM HE Barrage",
+            "sequence": "ddsads"
+        },
+        {
+            "name": "Orbital 380MM HE Barrage",
+            "sequence": "dswwdss"
+        },
+        {
+            "name": "Orbital Walking Barrage",
+            "sequence": "dsdsds"
+        },
+        {
+            "name": "Orbital Laser",
+            "sequence": "dswds"
+        },
+        {
+            "name": "Orbital Railgun Strike",
+            "sequence": "dwssd"
+        },
+        {
+            "name": "Eagle Straffing Run",
+            "sequence": "wdd"
+        },
+        {
+            "name": "Eagle Airstrike",
+            "sequence": "wdsd"
+        },
+        {
+            "name": "Eagle Cluster Bomb",
+            "sequence": "wdssd"
+        },
+        {
+            "name": "Eagle Napalm Strike",
+            "sequence": "wdsw"
+        },
+        {
+            "name": "Jump Pack",
+            "sequence": "swwsw"
+        },
+        {
+            "name": "Eagle Smoke Strike",
+            "sequence": "wdws"
+        },
+        {
+            "name": "Eagle 110MM Rocket Pods",
+            "sequence": "wdwa"
+        },
+        {
+            "name": "Eagle 500KG Bomb",
+            "sequence": "wdsss"
+        },
+        {
+            "name": "Eagle Rearm",
+            "sequence": "wwawd"
+        },
+        {
+            "name": "Orbital Precision Strike",
+            "sequence": "ddw"
+        },
+        {
+            "name": "Orbital Gas Strike",
+            "sequence": "ddsd"
+        },
+        {
+            "name": "Orbital EMS Strike",
+            "sequence": "ddas"
+        },
+        {
+            "name": "Orbital Smoke Strike",
+            "sequence": "ddsw"
+        },
+        {
+            "name": "HMG Emplacement",
+            "sequence": "swadda"
+        },
+        {
+            "name": "Shield Generator",
+            "sequence": "ssadad"
+        },
+        {
+            "name": "Tesla Tower",
+            "sequence": "wsdwad"
+        },
+        {
+            "name": "Anti-Personnel Minefield",
+            "sequence": "sawd"
+        },
+        {
+            "name": "Supply Pack",
+            "sequence": "saswws"
+        },
+        {
+            "name": "Grenade Launcher",
+            "sequence": "saswws"
+        },
+        {
+            "name": "Laser Canon",
+            "sequence": "saswa"
+        },
+        {
+            "name": "Incendiary Mines",
+            "sequence": "saas"
+        },
+        {
+            "name": "Guard Dog Rover",
+            "sequence": "swawdd"
+        },
+        {
+            "name": "Balistic Shield",
+            "sequence": "sasswa"
+        },
+        {
+            "name": "Arc Thrower",
+            "sequence": "sdswaa"
+        },
+        {
+            "name": "Shield Generator Pack",
+            "sequence": "swadad"
+        },
+        {
+            "name": "Machine Gun Sentry",
+            "sequence": "swddw"
+        },
+        {
+            "name": "Gatling Sentry",
+            "sequence": "swda"
+        },
+        {
+            "name": "Mortar Sentry",
+            "sequence": "swdds"
+        },
+        {
+            "name": "Guard Dog",
+            "sequence": "swawds"
+        },
+        {
+            "name": "Autocanon Sentry",
+            "sequence": "swdwaw"
+        },
+        {
+            "name": "Rocket Sentry",
+            "sequence": "swdda"
+        },
+        {
+            "name": "EMS Mortar Sentry",
+            "sequence": "swdsd"
+        },
+        {
+            "name": "Global Illumination Flare",
+            "sequence": "ddaa"
+        }
+    ]
+
+progression = 0
+
+currentStratagem = 3
+
+function updatestuff(){
+    document.getElementById("image").innerHTML = '<img src="HD2 icons/NO BG/' + list[currentStratagem].name + '.png" style="width: 10vh;">'
+    document.getElementById("name").innerHTML = list[currentStratagem].name
+    let text = list[currentStratagem].sequence.split("");                 // Get the text content into an array
+
+    let result = ""; // Will hold output
+
+    // Loop over the array
+    text.forEach(function(char){
+    arrow = "b"
+    if(char == "a"){
+        arrow = "🡄"
+    }
+    else if(char == "w"){
+        arrow = "🡅"
+    }  
+    else if(char == "d"){
+        arrow = "🡆"
+    } 
+    else if(char == "s"){
+        arrow = "🡇"
+    }
+    
+    result += (char.trim() === "") ? "" : "<span>" + arrow + "</span>";
+    });
+
+    document.getElementById("sequence").innerHTML = result
+
+    for (i = 0; i < progression; i++){
+        document.getElementById("sequence").childNodes[i].style.color = "yellow"
+    }
+}
+
+updatestuff()
+
+document.addEventListener("keydown", (event) => {
+    buttonpressed = ""
+    if (event.keyCode == 65){
+        buttonpressed = "a"
+    }
+    else if (event.keyCode == 87){
+        buttonpressed = "w"
+    }
+    else if (event.keyCode == 68){
+        buttonpressed = "d"
+    }
+    else if (event.keyCode == 83){
+        buttonpressed = "s"
+    }
+    if (buttonpressed == list[currentStratagem].sequence[progression]){
+        progression++
+    }
+    else if (buttonpressed == ""){}
+    else{
+        progression = 0
+    }
+    if (progression >= list[currentStratagem].sequence.length){
+        progression = 0
+        currentStratagem++
+    }
+    updatestuff()
+
+  })
+
+
+</script>
