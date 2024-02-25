@@ -15,7 +15,6 @@
             <p id="name">name</p>
             <p id="sequence">sequence</p>
 
-            <img src="HD2 icons/NO BG/" alt="">
         </div>
     </div>
     <div style="color: white;">Alexander Hamre</div>
@@ -251,7 +250,7 @@ progression = 0
 currentStratagem = 3
 
 function updatestuff(){
-    document.getElementById("image").innerHTML = '<img src="HD2 icons/NO BG/' + list[currentStratagem].name + '.png" style="width: 10vh;">'
+    document.getElementById("image").innerHTML = '<img src="Icons/' + list[currentStratagem].name + '.png" style="width: 10vh;">'
     document.getElementById("name").innerHTML = list[currentStratagem].name
     let text = list[currentStratagem].sequence.split("");                 // Get the text content into an array
 
