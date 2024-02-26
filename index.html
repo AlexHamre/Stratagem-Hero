@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helldivers 2 stratagem hero</title>
     <link href="https://fonts.cdnfonts.com/css/insignia" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/mashetic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap" rel="stylesheet">
 </head>
-<body style="background-color: rgb(25,25,25) ;font-family: 'Insignia', sans-serif;">
+<body style="background-color: rgb(25,25,25) ;font-family: 'Quantico', sans-serif;">
 
     <div style="color: white; text-align: center; font-size: 400%; border: 2%; border-color: white; border-style: solid hidden solid hidden; height: 80vh; margin-top: 10vh;">
         <div style="padding: 5%;">
-            <p id="image">image</p>
-            <p id="name">name</p>
-            <p id="sequence">sequence</p>
+
+            <div id="StartScreen">
+                <p style="font-size: 100%; text-shadow: 0px 0px 30px white;">STRATAGEM HERO</p>
+                <p style="font-size: 50%; color: yellow; text-shadow: 0px 0px 30px yellow; padding-top: 10%;">Enter any Stratagem Input to Start!</p>
+            </div>
+            <div id="Game" style="display: none;">
+                <p id="image">image</p>
+                <p id="name">name</p>
+                <p id="sequence">sequence</p>
+            </div>
 
         </div>
     </div>
@@ -21,16 +26,22 @@
     <br>
     Credit:
     <br>
-    Icons: https://www.dropbox.com/scl/fi/tcel8u07a2w37ch4h59r7/HD2-icons.zip
+    Icons: <a href="https://www.dropbox.com/scl/fi/tcel8u07a2w37ch4h59r7/HD2-icons.zip">https://www.dropbox.com/scl/fi/tcel8u07a2w37ch4h59r7/HD2-icons.zip</a>
     <br>
-    Combos: https://steamcommunity.com/sharedfiles/filedetails/?id=3161075951
+    Combos: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3161075951">https://steamcommunity.com/sharedfiles/filedetails/?id=3161075951</a>
 </body>
 </html>
 
 
 <script>
-//comment
-    list = [
+let score = 0
+
+// TIME IS 10 SEC PER ROUND
+// ROUND 1 = 6
+// ROUND 2 = 7
+// ROUND 3 = 8
+
+list = [
         {
             "name": "Reinforcement",
             "sequence": "wsdaw"
@@ -282,9 +293,11 @@ function updatestuff(){
     }
 }
 
-updatestuff()
 
 document.addEventListener("keydown", (event) => {
+    document.getElementById("StartScreen").style.display = "none"
+    document.getElementById("Game").style.display = "inline"
+
     buttonpressed = ""
     if (event.keyCode == 65){
         buttonpressed = "a"
@@ -306,6 +319,9 @@ document.addEventListener("keydown", (event) => {
         progression = 0
     }
     if (progression >= list[currentStratagem].sequence.length){
+        score += (list[currentStratagem].sequence.length * 5)
+        console.log(score)
+        
         progression = 0
         currentStratagem++
     }
@@ -315,3 +331,4 @@ document.addEventListener("keydown", (event) => {
 
 
 </script>
+
