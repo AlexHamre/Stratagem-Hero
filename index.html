@@ -99,10 +99,10 @@ list = [
             "name": "Resupply",
             "sequence": "sswd"
         },
-        {
+/*         {
             "name": "SOS Beacon",
             "sequence": "wsdw"
-        },
+        }, */
         {
             "name": "Hellbomb",
             "sequence": "swaswdsw"
@@ -127,10 +127,10 @@ list = [
             "name": "Recoiless Rifle",
             "sequence": "sadda"
         },
-        {
+/*         {
             "name": "Flamethrower",
             "sequence": "sawsw"
-        },
+        }, */
         {
             "name": "Auto-Canon",
             "sequence": "saswwd"
@@ -139,14 +139,14 @@ list = [
             "name": "Railgun",
             "sequence": "sdswad"
         },
-        {
+/*         {
             "name": "Spear",
             "sequence": "sswss"
-        },
-        {
+        }, */
+/*         {
             "name": "Orbital Gatling Barrage",
             "sequence": "dsaww"
-        },
+        }, */
         {
             "name": "Orbital Airburst Strike",
             "sequence": "ddd"
@@ -159,42 +159,42 @@ list = [
             "name": "Orbital 380MM HE Barrage",
             "sequence": "dswwdss"
         },
-        {
+/*         {
             "name": "Orbital Walking Barrage",
             "sequence": "dsdsds"
-        },
+        }, */
         {
             "name": "Orbital Laser",
             "sequence": "dswds"
         },
-        {
+/*         {
             "name": "Orbital Railgun Strike",
             "sequence": "dwssd"
-        },
+        }, */
         {
             "name": "Eagle Straffing Run",
             "sequence": "wdd"
         },
-        {
+/*         {
             "name": "Eagle Airstrike",
             "sequence": "wdsd"
-        },
-        {
+        }, */
+/*         {
             "name": "Eagle Cluster Bomb",
             "sequence": "wdssd"
-        },
-        {
+        }, */
+/*         {
             "name": "Eagle Napalm Strike",
             "sequence": "wdsw"
-        },
+        }, */
         {
             "name": "Jump Pack",
             "sequence": "swwsw"
         },
-        {
+/*         {
             "name": "Eagle Smoke Strike",
             "sequence": "wdws"
-        },
+        }, */
         {
             "name": "Eagle 110MM Rocket Pods",
             "sequence": "wdwa"
@@ -203,78 +203,78 @@ list = [
             "name": "Eagle 500KG Bomb",
             "sequence": "wdsss"
         },
-        {
+/*         {
             "name": "Eagle Rearm",
             "sequence": "wwawd"
-        },
-        {
+        }, */
+/*         {
             "name": "Orbital Precision Strike",
             "sequence": "ddw"
-        },
-        {
+        }, */
+/*         {
             "name": "Orbital Gas Strike",
             "sequence": "ddsd"
-        },
-        {
+        }, */
+/*         {
             "name": "Orbital EMS Strike",
             "sequence": "ddas"
-        },
-        {
+        }, */
+/*         {
             "name": "Orbital Smoke Strike",
             "sequence": "ddsw"
-        },
+        }, */
         {
             "name": "HMG Emplacement",
             "sequence": "swadda"
         },
-        {
+/*         {
             "name": "Shield Generator",
             "sequence": "ssadad"
-        },
-        {
+        }, */
+/*         {
             "name": "Tesla Tower",
             "sequence": "wsdwad"
-        },
+        }, */
         {
             "name": "Anti-Personnel Minefield",
             "sequence": "sawd"
         },
-        {
+/*         {
             "name": "Supply Pack",
             "sequence": "saswws"
-        },
-        {
+        }, */
+/*         {
             "name": "Grenade Launcher",
             "sequence": "saswws"
-        },
+        }, */
         {
             "name": "Laser Canon",
             "sequence": "saswa"
         },
-        {
+/*         {
             "name": "Incendiary Mines",
             "sequence": "saas"
-        },
-        {
+        }, */
+/*         {
             "name": "Guard Dog Rover",
             "sequence": "swawdd"
-        },
-        {
+        }, */
+/*         {
             "name": "Balistic Shield",
             "sequence": "sasswa"
-        },
-        {
+        }, */
+/*         {
             "name": "Arc Thrower",
             "sequence": "sdswaa"
-        },
+        }, */
         {
             "name": "Shield Generator Pack",
             "sequence": "swadad"
         },
-        {
+/*         {
             "name": "Machine Gun Sentry",
             "sequence": "swddw"
-        },
+        }, */
         {
             "name": "Gatling Sentry",
             "sequence": "swda"
@@ -287,18 +287,18 @@ list = [
             "name": "Guard Dog",
             "sequence": "swawds"
         },
-        {
+/*         {
             "name": "Autocanon Sentry",
             "sequence": "swdwaw"
-        },
+        }, */
         {
             "name": "Rocket Sentry",
             "sequence": "swdda"
         },
-        {
+/*         {
             "name": "EMS Mortar Sentry",
             "sequence": "swdsd"
-        },
+        }, */
         {
             "name": "Global Illumination Flare",
             "sequence": "ddaa"
@@ -442,6 +442,8 @@ document.addEventListener("keydown", (event) => {
                 roundLength++
                 score += pointsToBeAwarded
                 pointsToBeAwarded += 25
+                score += Math.floor(width)
+                console.log("time bonus:"+ Math.floor(width))
                 if(!messedUp){
                 score += 100
                 }
