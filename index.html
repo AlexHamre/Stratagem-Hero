@@ -40,34 +40,54 @@
                 <p style="font-size: 100%; text-shadow: 0px 0px 30px white;">Get Ready</p>
                 <p style="font-size: 50%; color: yellow; text-shadow: 0px 0px 30px yellow; padding-top: 10%;">Round</p>
             </div>
+            <div id="GameOver" style="display: none; margin-top: 0px; line-height: 1.05; font-size: 50%;">
+                <h1>Game Over</h1>
+                <h2>High scores</h2>
+                <p style="font-size: 50%;">1. Alexhamre 999999</p>
+                <p style="font-size: 50%;">2. Alexhamre 999999</p>
+                <p style="font-size: 50%;">3. Alexhamre 999999</p>
+                <p>Your final score</p>
+                <h2 id="score" style="color: yellow; line-height: 0;">1234</h2>
+                <h2>Refresh to play again</h2>
+
+            </div>
 
         </div>
     </div>
     <div style="color: white;">Alexander Hamre</div>
-    <br>
-    Credit:
-    <br>
+    <div style="color: gray;">
+
     Icons: <a href="https://www.dropbox.com/scl/fi/tcel8u07a2w37ch4h59r7/HD2-icons.zip">https://www.dropbox.com/scl/fi/tcel8u07a2w37ch4h59r7/HD2-icons.zip</a>
     <br>
     Combos: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3161075951">https://steamcommunity.com/sharedfiles/filedetails/?id=3161075951</a>
+    </div>
 </body>
 </html>
 
 
 <script>
-let score = 0
 
+// TIME IS 10 SECONDS PER ROUND
 // ROUND 1 = 6
 // ROUND 2 = 7
 // ROUND 3 = 8
 // ROUND 4 = 9
 // ROUND 5 = 10
 
+let score = 0
+
 let round = 1
 let roundLength = 6
 let roundArray = []
 let roundProgression = 0
 let pointsToBeAwarded = 75
+
+let progression = 0
+let progressStarted = false
+let width = 100
+
+let gamerunning = false
+let GAMEOVER = false
 
 list = [
         {
@@ -290,24 +310,30 @@ function newround(){
         roundArray[i] = Math.floor(Math.random() * list.length);
     }
     console.log(roundArray)
+    width = 100;
 }
 
 newround()
-progression = 0
 
-// TIME IS 10 SECONDS PER ROUND
-var progressStarted = false;
+function gameover(){
+    document.getElementById("Game").style.display = "none"
+    document.getElementById("GameOver").style.display = "inline"
+    document.getElementById("score").innerHTML = score
+
+}
+
 function Progressbar() {
     //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_progressbar_3
   if (!progressStarted) {
     progressStarted = true;
     var elem = document.getElementById("myBar");
-    var width = 100;
+    width = 100;
     var progressbarInterval = setInterval(frame, 10);
     function frame() {
       if (width <= 0) {
         clearInterval(progressbarInterval);
         i = 0;
+        gameover()
       } else {
         width -= 0.1;
         elem.style.width = width + "%";
@@ -353,9 +379,8 @@ function updatestuff(){
     }
 }
 
-gamerunning = false
 
-document.addEventListener("keydown", (event) => {
+function gamestart(){
     if (!gamerunning){
         gamerunning = true
         document.getElementById("StartScreen").style.display = "none"
@@ -366,43 +391,50 @@ document.addEventListener("keydown", (event) => {
             document.getElementById("Game").style.display = "inline"
         },1000)
     }
+}
 
-    buttonpressed = ""
-    if (event.keyCode == 65){
-        buttonpressed = "a"
-    }
-    else if (event.keyCode == 87){
-        buttonpressed = "w"
-    }
-    else if (event.keyCode == 68){
-        buttonpressed = "d"
-    }
-    else if (event.keyCode == 83){
-        buttonpressed = "s"
-    }
-    if (buttonpressed == list[roundArray[roundProgression]].sequence[progression]){
-        progression++
-    }
-    else if (buttonpressed == ""){}
-    else{
-        progression = 0
-    }
-    if (progression >= list[roundArray[roundProgression]].sequence.length){
-        score += (list[roundArray[roundProgression]].sequence.length * 5)
-        console.log(score)
-        
-        progression = 0
-        roundProgression++
-        if (roundProgression >= roundArray.length){
-            round++
-            roundLength++
-            score += pointsToBeAwarded
-            pointsToBeAwarded += 25
-            newround()
+
+document.addEventListener("keydown", (event) => {
+    if(!GAMEOVER){
+        buttonpressed = ""
+        if (event.keyCode == 65){
+            buttonpressed = "a"
         }
-    }
-    updatestuff()
+        else if (event.keyCode == 87){
+            buttonpressed = "w"
+        }
+        else if (event.keyCode == 68){
+            buttonpressed = "d"
+        }
+        else if (event.keyCode == 83){
+            buttonpressed = "s"
+        }
+        if (gamerunning && buttonpressed == list[roundArray[roundProgression]].sequence[progression]){
+            progression++
+        }
+        else if (buttonpressed == ""){}
+        else{
+            gamestart()
+            progression = 0
+        }
+        if (progression >= list[roundArray[roundProgression]].sequence.length){
+            score += (list[roundArray[roundProgression]].sequence.length * 5)
+            console.log(score)
+            
+            progression = 0
+            roundProgression++
 
+            width += 5
+            if (roundProgression >= roundArray.length){
+                round++
+                roundLength++
+                score += pointsToBeAwarded
+                pointsToBeAwarded += 25
+                newround()
+            }
+        }
+        updatestuff()
+    }
   })
 
 
