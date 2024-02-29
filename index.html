@@ -86,6 +86,7 @@ let progression = 0
 let progressStarted = false
 let width = 100
 
+let messedUp = false
 let gamerunning = false
 let GAMEOVER = false
 
@@ -305,6 +306,7 @@ list = [
     ]
 
 function newround(){
+    messedUp = false
     roundProgression = 0
     for(i = 0; i < roundLength; i++){
         roundArray[i] = Math.floor(Math.random() * list.length);
@@ -323,6 +325,7 @@ function gameover(){
 }
 
 function Progressbar() {
+    messedUp = false
     //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_progressbar_3
   if (!progressStarted) {
     progressStarted = true;
@@ -330,14 +333,20 @@ function Progressbar() {
     width = 100;
     var progressbarInterval = setInterval(frame, 10);
     function frame() {
-      if (width <= 0) {
-        clearInterval(progressbarInterval);
-        i = 0;
-        gameover()
-      } else {
-        width -= 0.1;
-        elem.style.width = width + "%";
-      }
+        if (width <= 30){
+            elem.style.backgroundColor = "red"
+        }
+        else{
+            elem.style.backgroundColor = "yellow"
+        }
+        if (width <= 0) {
+            clearInterval(progressbarInterval);
+            i = 0;
+            gameover()
+        } else {
+            width -= 0.1;
+            elem.style.width = width + "%";
+        }
     }
   }
 }
@@ -416,11 +425,14 @@ document.addEventListener("keydown", (event) => {
         else{
             gamestart()
             progression = 0
+            if(gamerunning){
+                messedUp = true
+            }
         }
         if (progression >= list[roundArray[roundProgression]].sequence.length){
             score += (list[roundArray[roundProgression]].sequence.length * 5)
             console.log(score)
-            
+
             progression = 0
             roundProgression++
 
@@ -430,6 +442,11 @@ document.addEventListener("keydown", (event) => {
                 roundLength++
                 score += pointsToBeAwarded
                 pointsToBeAwarded += 25
+                if(!messedUp){
+                score += 100
+                }
+                console.log(messedUp)
+                messedUp = false
                 newround()
             }
         }
