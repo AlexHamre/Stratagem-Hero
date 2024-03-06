@@ -28,7 +28,12 @@
                 <p style="font-size: 100%; text-shadow: 0px 0px 30px white;">STRATAGEM HERO</p>
                 <p style="font-size: 50%; color: yellow; text-shadow: 0px 0px 30px yellow; padding-top: 10%;">Enter any Stratagem Input to Start!</p>
             </div>
-            <div id="Game" style="display: none;">
+            <div id="Game" style="display: none; padding: 0px;">
+                <p style="position: absolute; left: 5%; top: 8.5%; font-size: 40%;">round</p>
+                <p style="position: absolute; left: 5%; top: 10%; font-size: 60%; color: yellow;" id="round">0</p>
+
+                <p style="position: absolute; right: 5%; top: 10%; font-size: 60%; color: yellow;" id="livescore">0</p>
+                <p style="position: absolute; right: 5%; top: 15%; font-size: 40%;">score</p>
                 <p id="image">image</p>
                 <p id="name">name</p>
                 <p id="sequence">sequence</p>
@@ -313,6 +318,7 @@ function newround(){
     }
     console.log(roundArray)
     width = 100;
+    document.getElementById("round").innerText = round
 }
 
 newround()
@@ -320,7 +326,7 @@ newround()
 function gameover(){
     document.getElementById("Game").style.display = "none"
     document.getElementById("GameOver").style.display = "inline"
-    document.getElementById("score").innerHTML = score
+    document.getElementById("score").innerText = score
 
 }
 
@@ -406,16 +412,16 @@ function gamestart(){
 document.addEventListener("keydown", (event) => {
     if(!GAMEOVER){
         buttonpressed = ""
-        if (event.keyCode == 65){
+        if (event.keyCode == 65 || event.keyCode == 37){
             buttonpressed = "a"
         }
-        else if (event.keyCode == 87){
+        else if (event.keyCode == 87 || event.keyCode == 38){
             buttonpressed = "w"
         }
-        else if (event.keyCode == 68){
+        else if (event.keyCode == 68 || event.keyCode == 39){
             buttonpressed = "d"
         }
-        else if (event.keyCode == 83){
+        else if (event.keyCode == 83 || event.keyCode == 40){
             buttonpressed = "s"
         }
         if (gamerunning && buttonpressed == list[roundArray[roundProgression]].sequence[progression]){
@@ -435,6 +441,8 @@ document.addEventListener("keydown", (event) => {
 
             progression = 0
             roundProgression++
+            document.getElementById("livescore").innerText = score
+
 
             width += 5
             if (roundProgression >= roundArray.length){
@@ -449,6 +457,7 @@ document.addEventListener("keydown", (event) => {
                 }
                 console.log(messedUp)
                 messedUp = false
+                document.getElementById("livescore").innerText = score
                 newround()
             }
         }
