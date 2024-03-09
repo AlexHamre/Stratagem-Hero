@@ -94,7 +94,7 @@ let messedUp = false
 let gamerunning = false
 let GAMEOVER = false
 
-if(document.cookie != "[]"){
+if(document.cookie != "[]" || document.cookie == null){
     let cookie = document.cookie
     cookie = cookie.replaceAll("🡇", "s")
     cookie = cookie.replaceAll("🡅", "w")
