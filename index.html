@@ -70,7 +70,6 @@
 
 
 <script>
-
 // TIME IS 10 SECONDS PER ROUND
 // ROUND 1 = 6
 // ROUND 2 = 7
@@ -94,7 +93,7 @@ let messedUp = false
 let gamerunning = false
 let GAMEOVER = false
 
-if(document.cookie != "[]" || document.cookie == null){
+if(document.cookie != "[]" && document.cookie != ""){
     let cookie = document.cookie
     cookie = cookie.replaceAll("🡇", "s")
     cookie = cookie.replaceAll("🡅", "w")
