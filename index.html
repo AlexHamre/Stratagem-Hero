@@ -1,8 +1,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helldivers 2 stratagem hero</title>
-    <link href="https://fonts.cdnfonts.com/css/insignia" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/mashetic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap" rel="stylesheet">
 </head>
 
@@ -20,6 +18,7 @@
 </style>
 
 <body style="background-color: rgb(25,25,25) ;font-family: 'Quantico', sans-serif;">
+    <a href="./selector.html" style="position: absolute;">Select Stratagems</a>
 
     <div style="color: white; text-align: center; font-size: 400%; border: 2%; border-color: white; border-style: solid hidden solid hidden; height: 80vh; margin-top: 10vh;">
         <div style="padding: 5%;">
@@ -95,7 +94,21 @@ let messedUp = false
 let gamerunning = false
 let GAMEOVER = false
 
-list = [
+if(document.cookie != "[]"){
+    let cookie = document.cookie
+    cookie = cookie.replaceAll("🡇", "s")
+    cookie = cookie.replaceAll("🡅", "w")
+    cookie = cookie.replaceAll("🡆", "d")
+    cookie = cookie.replaceAll("🡄", "a")
+
+    console.log(cookie)
+
+    console.log(JSON.parse(cookie))
+
+    list = JSON.parse(cookie)
+}
+else{
+    list = [
         {
             "name": "Reinforcement",
             "sequence": "wsdaw"
@@ -104,10 +117,6 @@ list = [
             "name": "Resupply",
             "sequence": "sswd"
         },
-/*         {
-            "name": "SOS Beacon",
-            "sequence": "wsdw"
-        }, */
         {
             "name": "Hellbomb",
             "sequence": "swaswdsw"
@@ -132,10 +141,6 @@ list = [
             "name": "Recoiless Rifle",
             "sequence": "sadda"
         },
-/*         {
-            "name": "Flamethrower",
-            "sequence": "sawsw"
-        }, */
         {
             "name": "Auto-Canon",
             "sequence": "saswwd"
@@ -144,14 +149,6 @@ list = [
             "name": "Railgun",
             "sequence": "sdswad"
         },
-/*         {
-            "name": "Spear",
-            "sequence": "sswss"
-        }, */
-/*         {
-            "name": "Orbital Gatling Barrage",
-            "sequence": "dsaww"
-        }, */
         {
             "name": "Orbital Airburst Strike",
             "sequence": "ddd"
@@ -164,18 +161,10 @@ list = [
             "name": "Orbital 380MM HE Barrage",
             "sequence": "dswwdss"
         },
-/*         {
-            "name": "Orbital Walking Barrage",
-            "sequence": "dsdsds"
-        }, */
         {
             "name": "Orbital Laser",
             "sequence": "dswds"
         },
-/*         {
-            "name": "Orbital Railgun Strike",
-            "sequence": "dwssd"
-        }, */
         {
             "name": "Eagle Straffing Run",
             "sequence": "wdd"
@@ -184,22 +173,10 @@ list = [
             "name": "Eagle Airstrike",
             "sequence": "wdsd"
         },
-/*         {
-            "name": "Eagle Cluster Bomb",
-            "sequence": "wdssd"
-        }, */
-/*         {
-            "name": "Eagle Napalm Strike",
-            "sequence": "wdsw"
-        }, */
         {
             "name": "Jump Pack",
             "sequence": "swwsw"
         },
-/*         {
-            "name": "Eagle Smoke Strike",
-            "sequence": "wdws"
-        }, */
         {
             "name": "Eagle 110MM Rocket Pods",
             "sequence": "wdwa"
@@ -208,78 +185,22 @@ list = [
             "name": "Eagle 500KG Bomb",
             "sequence": "wdsss"
         },
-/*         {
-            "name": "Eagle Rearm",
-            "sequence": "wwawd"
-        }, */
-/*         {
-            "name": "Orbital Precision Strike",
-            "sequence": "ddw"
-        }, */
-/*         {
-            "name": "Orbital Gas Strike",
-            "sequence": "ddsd"
-        }, */
-/*         {
-            "name": "Orbital EMS Strike",
-            "sequence": "ddas"
-        }, */
-/*         {
-            "name": "Orbital Smoke Strike",
-            "sequence": "ddsw"
-        }, */
         {
             "name": "HMG Emplacement",
             "sequence": "swadda"
         },
-/*         {
-            "name": "Shield Generator",
-            "sequence": "ssadad"
-        }, */
-/*         {
-            "name": "Tesla Tower",
-            "sequence": "wsdwad"
-        }, */
         {
             "name": "Anti-Personnel Minefield",
             "sequence": "sawd"
         },
-/*         {
-            "name": "Supply Pack",
-            "sequence": "saswws"
-        }, */
-/*         {
-            "name": "Grenade Launcher",
-            "sequence": "saswws"
-        }, */
         {
             "name": "Laser Canon",
             "sequence": "saswa"
         },
-/*         {
-            "name": "Incendiary Mines",
-            "sequence": "saas"
-        }, */
-/*         {
-            "name": "Guard Dog Rover",
-            "sequence": "swawdd"
-        }, */
-/*         {
-            "name": "Balistic Shield",
-            "sequence": "sasswa"
-        }, */
-/*         {
-            "name": "Arc Thrower",
-            "sequence": "sdswaa"
-        }, */
         {
             "name": "Shield Generator Pack",
             "sequence": "swadad"
         },
-/*         {
-            "name": "Machine Gun Sentry",
-            "sequence": "swddw"
-        }, */
         {
             "name": "Gatling Sentry",
             "sequence": "swda"
@@ -292,23 +213,17 @@ list = [
             "name": "Guard Dog",
             "sequence": "swawds"
         },
-/*         {
-            "name": "Autocanon Sentry",
-            "sequence": "swdwaw"
-        }, */
         {
             "name": "Rocket Sentry",
             "sequence": "swdda"
         },
-/*         {
-            "name": "EMS Mortar Sentry",
-            "sequence": "swdsd"
-        }, */
         {
             "name": "Global Illumination Flare",
             "sequence": "ddaa"
         }
     ]
+}
+
 
 function newround(){
     messedUp = false
@@ -332,7 +247,6 @@ function gameover(){
 
 function Progressbar() {
     messedUp = false
-    //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_progressbar_3
   if (!progressStarted) {
     progressStarted = true;
     var elem = document.getElementById("myBar");
