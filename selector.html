@@ -250,7 +250,7 @@ for(i = 0; i < list.length; i++){
     document.getElementById("grid").appendChild(span)
     
 }
-if(document.cookie != "[]"){
+if(document.cookie != "[]" || document.cookie == null){
     cookie = JSON.parse(document.cookie)
     for(i = 0; i < cookie.length; i++){
         document.getElementById(cookie[i].name).classList.add("selected")
