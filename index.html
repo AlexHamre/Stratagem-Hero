@@ -382,7 +382,6 @@ document.addEventListener("keydown", (event) => {
                 round++
                 roundLength++
                 score += pointsToBeAwarded
-                pointsToBeAwarded += 25
                 score += Math.floor(width)
                 console.log("time bonus:"+ Math.floor(width))
                 if(!messedUp){
@@ -404,13 +403,13 @@ document.addEventListener("keydown", (event) => {
                 document.getElementById("intermission").style.display = "inline"
                 width = 100
                 newround()
-
+                messedUp = false
+                pointsToBeAwarded += 25
                 setTimeout(function(){
                     document.getElementById("intermission").style.display = "none"
                     document.getElementById("Game").style.display = "inline"
                     width = 100
                 },3000)
-                messedUp = false
             }
         }
         updatestuff()
