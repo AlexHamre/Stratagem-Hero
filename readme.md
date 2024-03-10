@@ -1,1 +1,1 @@
-Very wip. I push updates now and then as i feel like it
+Online version of Stratagem hero from Helldivers 2 with worse looks and more features
