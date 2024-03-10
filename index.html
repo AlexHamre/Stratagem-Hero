@@ -389,7 +389,6 @@ document.addEventListener("keydown", (event) => {
                 score += 100
                 }
                 console.log(messedUp)
-                messedUp = false
                 document.getElementById("livescore").innerText = score
                 document.getElementById("Game").style.display = "none"
                 document.getElementById("roundBonus").innerText = pointsToBeAwarded
@@ -411,6 +410,7 @@ document.addEventListener("keydown", (event) => {
                     document.getElementById("Game").style.display = "inline"
                     width = 100
                 },3000)
+                messedUp = false
             }
         }
         updatestuff()
